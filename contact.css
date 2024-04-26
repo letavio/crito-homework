@@ -1,0 +1,589 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    background-color: white;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  }
+  
+  p {
+    line-height: 30px;
+    color: #4e4e4e;
+  }
+  
+  h4 {
+    font-size: 20px;
+  }
+  
+  .login-button {
+    width: 122px;
+    height: 48px;
+    border-radius: 30px;
+    margin-right: 9px;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F9D783;
+    transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+  }
+  .login-button i {
+    margin-left: 13px;
+  }
+  .login-button:hover {
+    background-color: black;
+    color: white;
+  }
+  
+  .element {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+  }
+  @media (max-width: 1400px) {
+    .element {
+      width: 500px;
+    }
+  }
+  @media (max-width: 768px) {
+    .element {
+      display: none;
+    }
+  }
+  
+  form input {
+    display: block;
+  }
+  
+  header {
+    width: 100%;
+    background-color: #F0EFE9;
+  }
+  header .header-container {
+    margin: auto;
+    height: 120px;
+    width: 1300px;
+    display: flex;
+  }
+  @media (max-width: 1400px) {
+    header .header-container {
+      width: 1000px;
+    }
+  }
+  @media (max-width: 1200px) {
+    header .header-container {
+      width: 800px;
+    }
+  }
+  @media (max-width: 992px) {
+    header .header-container {
+      width: 600px;
+    }
+  }
+  @media (max-width: 768px) {
+    header .header-container {
+      position: relative;
+      width: 100%;
+    }
+  }
+  header .header-container img {
+    width: 137px;
+    margin-right: 3vw;
+  }
+  @media (max-width: 768px) {
+    header .header-container img {
+      margin-left: 3vw;
+      min-width: 170px;
+    }
+  }
+  header .header-container .header {
+    position: relative;
+    width: 100%;
+  }
+  @media (max-width: 768px) {
+    header .header-container .header {
+      position: static;
+    }
+  }
+  header .header-container .header .contact {
+    display: flex;
+    margin-top: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #cacaca;
+  }
+  @media (max-width: 768px) {
+    header .header-container .header .contact {
+      display: none;
+    }
+  }
+  header .header-container .header .contact .info {
+    width: 200px;
+    margin-left: 0.2vw;
+    margin-right: 0.2vw;
+    font-size: 15px;
+    position: relative;
+  }
+  @media (max-width: 1200px) {
+    header .header-container .header .contact .info {
+      display: none;
+    }
+  }
+  header .header-container .header .contact .info::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 1px;
+    height: 90%;
+    background-color: #cacaca;
+  }
+  header .header-container .header .contact .info i {
+    margin: 0.1vw;
+    font-size: 20px;
+    color: #191919;
+  }
+  header .header-container .header .contact .location-social {
+    width: calc(100% - 370px);
+    display: flex;
+    justify-content: space-between;
+  }
+  @media (max-width: 1200px) {
+    header .header-container .header .contact .location-social {
+      justify-content: end;
+      width: 100%;
+    }
+  }
+  header .header-container .header .contact .location-social::after {
+    display: none;
+  }
+  @media (max-width: 1200px) {
+    header .header-container .header .contact .location-social .location {
+      display: none;
+    }
+  }
+  header .header-container .header .contact .location-social .social a {
+    margin-right: 10px;
+  }
+  header .header-container .header .contact .location-social .social a i {
+    margin: 0;
+    font-size: 16px;
+    transition: color 0.1s ease-in-out;
+  }
+  header .header-container .header .contact .location-social .social a i:hover {
+    color: #5a5a5a;
+  }
+  header .header-container .header .nav {
+    width: 100%;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+  }
+  @media (max-width: 992px) {
+    header .header-container .header .nav .login-button {
+      width: 110px;
+    }
+  }
+  @media (max-width: 768px) {
+    header .header-container .header .nav .login-button {
+      margin: auto;
+      margin-top: 18px;
+    }
+  }
+  @media (min-width: 769px) {
+    header .header-container .header .nav {
+      display: flex !important;
+    }
+  }
+  @media (max-width: 768px) {
+    header .header-container .header .nav {
+      display: none;
+      background-color: rgba(240, 239, 233, 0.9647058824);
+      z-index: 999;
+      top: 120px;
+      left: 0;
+      height: 410px;
+    }
+  }
+  header .header-container .header .nav nav {
+    width: 306px;
+    display: flex;
+    justify-content: space-between;
+  }
+  @media (max-width: 992px) {
+    header .header-container .header .nav nav {
+      width: 290px;
+    }
+  }
+  @media (max-width: 768px) {
+    header .header-container .header .nav nav {
+      width: 100%;
+      display: block;
+    }
+  }
+  header .header-container .header .nav nav a {
+    text-decoration: none;
+    color: #191919;
+    margin-bottom: 11px;
+    position: relative;
+  }
+  @media (max-width: 768px) {
+    header .header-container .header .nav nav a {
+      text-align: center;
+      margin: 0;
+      width: 100%;
+      padding-top: 27px;
+      padding-bottom: 27px;
+      display: block;
+      font-size: 1.1rem;
+      transition: background-color 0.15s ease-in-out;
+    }
+    header .header-container .header .nav nav a:hover {
+      background-color: rgba(0, 0, 0, 0.068);
+    }
+  }
+  header .header-container .header .nav nav a::after {
+    content: "";
+    margin: auto;
+    position: absolute;
+    bottom: 13px;
+    right: 0;
+    left: 0;
+    width: 60%;
+    height: 2px;
+    background-color: transparent;
+    transition: background-color 0.15s ease-in-out;
+  }
+  @media (max-width: 768px) {
+    header .header-container .header .nav nav a::after {
+      display: none;
+    }
+  }
+  header .header-container .header .nav nav a:hover::after {
+    background-color: #191919;
+  }
+  header .header-container .header .nav nav .here::after {
+    content: "";
+    margin: auto;
+    position: absolute;
+    bottom: 13px;
+    right: 0;
+    left: 0;
+    width: 40%;
+    height: 2px;
+    background-color: #191919;
+  }
+  @media (max-width: 768px) {
+    header .header-container .header .nav nav .here::after {
+      display: none;
+    }
+  }
+  header .header-container .header .menu {
+    border: none;
+    position: absolute;
+    right: 3vw;
+    top: 35px;
+    background-color: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.15s ease-in-out;
+  }
+  @media (min-width: 769px) {
+    header .header-container .header .menu {
+      display: none;
+    }
+  }
+  header .header-container .header .menu:hover {
+    background-color: rgba(0, 0, 0, 0.068);
+  }
+  header .header-container .header .menu i {
+    font-size: 2.8rem;
+  }
+  
+  main .top {
+    padding: 70px 40px;
+    background-color: #F0EFE9;
+    position: relative;
+    margin-bottom: 110px;
+  }
+  main .top .breadcrumb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main .top .breadcrumb a {
+    display: block;
+    -webkit-text-decoration: underline 1px solid transparent;
+            text-decoration: underline 1px solid transparent;
+    color: black;
+    margin: 0 10px;
+    transition: -webkit-text-decoration 0.15s ease-in-out;
+    transition: text-decoration 0.15s ease-in-out;
+    transition: text-decoration 0.15s ease-in-out, -webkit-text-decoration 0.15s ease-in-out;
+  }
+  main .top .breadcrumb a:hover {
+    -webkit-text-decoration: underline 1px solid black;
+            text-decoration: underline 1px solid black;
+  }
+  main .top .breadcrumb a:first-child {
+    font-weight: 100;
+  }
+  main .top h1 {
+    font-size: 56px;
+    text-align: center;
+    margin: 0;
+    margin-top: 8px;
+  }
+  main .info .info-grid {
+    max-width: 1380px;
+    padding: 0 40px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  main .info .info-grid .info-grid-container {
+    display: flex;
+    justify-content: center;
+    border: 1px solid #cacaca;
+    margin: 0 12px;
+    margin-bottom: 24px;
+    padding: 40px 0;
+    max-width: 700px;
+    min-width: 400px;
+    flex-grow: 1;
+  }
+  @media (max-width: 768px) {
+    main .info .info-grid .info-grid-container {
+      max-width: 500px;
+      min-width: 330px;
+    }
+  }
+  main .info .info-grid .info-grid-container i {
+    font-size: 18px;
+    color: white;
+    background-color: black;
+    width: 58px;
+    height: 58px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: 0 5% 0 0;
+  }
+  main .info .info-grid .info-grid-container .info-container {
+    margin-right: 12%;
+  }
+  main .info .info-grid .info-grid-container .info-container h4 {
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  main .info .info-grid .info-grid-container .info-container p {
+    margin: 0;
+    line-height: 27px;
+  }
+  main .contact {
+    margin-top: 70px;
+    padding: 0 20px;
+  }
+  main .contact .contact-container {
+    max-width: 1380px;
+    padding: 90px 40px;
+    margin: auto;
+    background-color: #F0EFE9;
+  }
+  main .contact .contact-container h2 {
+    font-size: 42px;
+    max-width: 450px;
+    text-align: center;
+    margin: auto;
+  }
+  main .contact .contact-container form {
+    width: 85%;
+    margin: auto;
+    margin-top: 30px;
+  }
+  main .contact .contact-container form input, main .contact .contact-container form textarea {
+    width: 100%;
+    margin-top: 20px;
+    padding: 18px 30px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  }
+  main .contact .contact-container form textarea {
+    resize: none;
+    height: 160px;
+  }
+  @media (max-width: 576px) {
+    main .contact .contact-container form textarea {
+      height: 250px;
+    }
+  }
+  main .contact .contact-container form .login-button {
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 40px;
+    padding: 28px 0;
+  }
+  main .map {
+    
+    height: 620px;
+    margin-top: 94px;
+  }
+  
+  footer {
+    background-color: #0E1021;
+  }
+  footer p, footer a {
+    color: rgb(189, 189, 189);
+  }
+  footer .footer-nav-section {
+    position: relative;
+  }
+  footer .footer-nav-section .footer-element {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+  }
+  footer .footer-nav-section .footer-nav {
+    max-width: 1380px;
+    padding: 100px 40px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+  }
+  @media (max-width: 1200px) {
+    footer .footer-nav-section .footer-nav {
+      grid-template-columns: 1fr;
+      padding: 60px 20px;
+    }
+  }
+  footer .footer-nav-section .footer-nav .footer-about {
+    margin-right: 25px;
+  }
+  footer .footer-nav-section .footer-nav .footer-about p {
+    margin-bottom: 0;
+  }
+  @media (max-width: 1200px) {
+    footer .footer-nav-section .footer-nav .footer-about {
+      margin: auto;
+      margin-bottom: 20px;
+      width: 500px;
+    }
+    footer .footer-nav-section .footer-nav .footer-about img {
+      display: block;
+      margin: auto;
+      margin-bottom: 22px;
+    }
+    footer .footer-nav-section .footer-nav .footer-about p {
+      text-align: center;
+    }
+  }
+  @media (max-width: 768px) {
+    footer .footer-nav-section .footer-nav .footer-about {
+      max-width: 500px;
+      width: 80%;
+    }
+  }
+  footer .footer-nav-section .footer-nav nav {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 15px;
+  }
+  @media (max-width: 768px) {
+    footer .footer-nav-section .footer-nav nav {
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      justify-content: space-around;
+      gap: 20px;
+    }
+  }
+  @media (max-width: 768px) {
+    footer .footer-nav-section .footer-nav nav div {
+      text-align: center;
+    }
+  }
+  footer .footer-nav-section .footer-nav nav div h4 {
+    color: white;
+    margin-bottom: 30px;
+  }
+  footer .footer-nav-section .footer-nav nav div a {
+    display: block;
+    -webkit-text-decoration: underline 1px solid transparent;
+            text-decoration: underline 1px solid transparent;
+    margin: 15px 0;
+    transition: -webkit-text-decoration 0.15s ease-in-out;
+    transition: text-decoration 0.15s ease-in-out;
+    transition: text-decoration 0.15s ease-in-out, -webkit-text-decoration 0.15s ease-in-out;
+  }
+  footer .footer-nav-section .footer-nav nav div a:hover {
+    -webkit-text-decoration: underline 1px solid rgb(189, 189, 189);
+            text-decoration: underline 1px solid rgb(189, 189, 189);
+  }
+  footer .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1725490196);
+  }
+  footer .footer-bottom .footer-bottom-container {
+    max-width: 1380px;
+    padding: 10px 40px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @media (max-width: 768px) {
+    footer .footer-bottom .footer-bottom-container {
+      display: block;
+    }
+  }
+  footer .footer-bottom .footer-bottom-container .social a {
+    margin-left: 25px;
+    color: white;
+  }
+  footer .footer-bottom .footer-bottom-container .social a i {
+    font-size: 16px;
+    transition: color 0.1s ease-in-out;
+  }
+  footer .footer-bottom .footer-bottom-container .social a i:hover {
+    color: rgba(255, 255, 255, 0.4784313725);
+  }
+  @media (max-width: 768px) {
+    footer .footer-bottom .footer-bottom-container .social {
+      display: none;
+    }
+  }
+  footer .footer-bottom .footer-bottom-container .mobile {
+    display: none;
+  }
+  footer .footer-bottom .footer-bottom-container .mobile a {
+    margin: 0;
+  }
+  @media (max-width: 768px) {
+    footer .footer-bottom .footer-bottom-container .mobile {
+      display: flex;
+      justify-content: space-around;
+      width: 200px;
+      margin: auto;
+      margin-top: 15px;
+    }
+  }
+  @media (max-width: 768px) {
+    footer .footer-bottom .footer-bottom-container p {
+      text-align: center;
+    }
+  }
+
+
+
